@@ -27,6 +27,7 @@ def main():
         "neovim",
         "alacritty",
         "lazygit",
+        "github-cli",
     ]
 
     for package in packages:
