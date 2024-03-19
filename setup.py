@@ -34,6 +34,8 @@ def adding_configs():
             ("git", "~/.config/git"),
             ("Xmodmap", "~/.Xmodmap"),
             ("alacritty", "~/.config/alacritty"),
+            ("tmux/tmux.conf", "~/.tmux.conf"),
+            ("tmux/tmux", "~/.tmux"),
         ]
 
         for config, destination in configs:
