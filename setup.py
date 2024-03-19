@@ -43,9 +43,9 @@ def adding_configs():
             destination_path = os.path.expanduser(destination)
 
             # If the destination exists, remove it
-            if os.path.lexists(destination_path):
-                os.unlink(destination_path)
-                logging.debug(f"Removed existing path: {destination_path}")
+            if os.path.isdir(destination_path):
+                shutil.rmtree(destination_path)
+                logging.debug(f"Removed existing directory: {destination_path}")
 
             # Create symbolic link
             os.symlink(source_path, destination_path)
