@@ -46,6 +46,7 @@ def adding_configs():
             ("alacritty", "~/.config/alacritty"),
             ("tmux/tmux.conf", "~/.tmux.conf"),
             ("tmux/tmux", "~/.tmux"),
+            ("starhip/starhip.toml", "~/.config/starship.toml"),
         ]
 
         for config, destination in configs:
