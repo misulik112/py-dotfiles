@@ -28,21 +28,6 @@ def install_packages():
         logging.error(f"Failed to install packages: {e}")
 
 
-# def clone_git_repository(repo_url, destination):
-#     """
-#     Clone a Git repository.
-#
-#     Args:
-#     - repo_url (str): The URL of the Git repository to clone.
-#     - destination (str): The destination directory where the repository will be cloned.
-#     """
-#     try:
-#         subprocess.run(["git", "clone", repo_url, destination], check=True)
-#         logging.info(f"Cloned repository from {repo_url} to {destination}")
-#     except subprocess.CalledProcessError as e:
-#         logging.error(f"Failed to clone repository: {e}")
-
-
 def adding_configs():
     logging.info("Adding configurations...")
     try:
@@ -53,6 +38,7 @@ def adding_configs():
             ("alacritty", "~/.config/alacritty"),
             ("tmux/tmux.conf", "~/.tmux.conf"),
             ("starhip/starhip.toml", "~/.config/starship.toml"),
+            ("bashrc", "~/.bashrc"),
         ]
         for config, destination in configs:
             source_path = os.path.abspath(f"config/{config}")
@@ -68,10 +54,6 @@ def adding_configs():
             os.symlink(source_path, destination_path)
             logging.debug(f"Linked {source_path} to {destination_path}")
 
-        # # Clone the tmux plugin manager repository
-        # clone_git_repository(
-        #     "https://github.com/tmux-plugins/tpm", "~/.tmux/plugins/tpm"
-        )
         logging.info("Configurations added successfully.")
     except Exception as e:
         logging.error(f"Failed to add configurations: {e}")
