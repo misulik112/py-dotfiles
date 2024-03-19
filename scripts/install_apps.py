@@ -28,6 +28,7 @@ def main():
         "alacritty",
         "lazygit",
         "github-cli",
+        "tmux",
     ]
 
     for package in packages:
