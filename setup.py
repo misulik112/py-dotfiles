@@ -25,6 +25,15 @@ def install_packages():
         logging.error(f"Failed to install packages: {e}")
 
 
+def delete_alacritty_config():
+    alacritty_config_path = os.path.expanduser("~/.config/alacritty")
+
+    # Check if the alacritty config directory exists
+    if os.path.isdir(alacritty_config_path):
+        shutil.rmtree(alacritty_config_path)
+        logging.debug(f"Deleting original Alacritty config: {alacritty_config_path}")
+
+
 def adding_configs():
     logging.info("Adding configurations...")
     try:
