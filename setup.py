@@ -43,6 +43,13 @@ def adding_configs():
             source_path = os.path.abspath(f"config/{config}")
             destination_path = os.path.expanduser(destination)
 
+            # If the destination exists and is a symbolic link or a regular file, remove it
+            if os.path.lexists(destination_path):
+                os.unlink(destination_path)
+                logging.debug(
+                    f"Removing existing symbolic link or file: {destination_path}"
+                )
+
             # If the destination exists, remove it
             if os.path.isdir(destination_path):
                 shutil.rmtree(destination_path)
