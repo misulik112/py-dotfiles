@@ -1,6 +1,7 @@
 import os
 import sys
 import logging
+import shutil
 
 # Enable command tracing
 DEBUG = True
