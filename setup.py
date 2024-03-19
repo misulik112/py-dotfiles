@@ -11,6 +11,7 @@ def main():
     configs = [
         ("git", "~/.config/git"),
         ("Xmodmap", "~/.Xmodmap"),
+        ("alacritty", "~/.config/alacritty"),
     ]
 
     for config, destination in configs:
