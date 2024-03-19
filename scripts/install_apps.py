@@ -26,6 +26,7 @@ def main():
         "tree",
         "neovim",
         "alacritty",
+        "lazygit",
     ]
 
     for package in packages:
