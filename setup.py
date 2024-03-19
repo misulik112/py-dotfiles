@@ -51,7 +51,7 @@ def adding_configs():
                 )
 
             # If the destination exists, remove it
-            if os.path.isdir(destination_path):
+            elif os.path.isdir(destination_path):
                 shutil.rmtree(destination_path)
                 logging.debug(f"Removed existing directory: {destination_path}")
 
