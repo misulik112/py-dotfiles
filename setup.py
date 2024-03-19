@@ -75,4 +75,5 @@ def adding_configs():
 
 if __name__ == "__main__":
     install_packages()
+    delete_alacritty_config()
     adding_configs()
