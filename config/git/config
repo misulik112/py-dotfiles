@@ -1,0 +1,17 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = ursu.alin89@gmail.com
+	name = misulik112
+[init]
+	defaultBranch = main
+[help]
+	autocorrect = prompt
+[alias]
+  switch-recent = !git branch --sort=-committerdate --format='%(refname:short)' | fzf --preview='git log --date=relative --color main..{}' | xargs git switch
+[push]
+  autoSetupRemote = true 
