@@ -39,6 +39,7 @@ def adding_configs():
             ("tmux/tmux.conf", "~/.tmux.conf"),
             ("starhip/starhip.toml", "~/.config/starship.toml"),
             ("bashrc", "~/.bashrc"),
+            ("qtile", "~/.config/qtile"),
         ]
         for config, destination in configs:
             source_path = os.path.abspath(f"config/{config}")
