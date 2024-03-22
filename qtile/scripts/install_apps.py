@@ -39,5 +39,11 @@ def main():
             print(f"{package} is already installed. Skipping...")
 
 
+def tmux_plugins():
+    git_clone = "git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm"
+    subprocess.run(git_clone, shell=True)
+
+
 if __name__ == "__main__":
     main()
+    tmux_plugins()

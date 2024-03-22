@@ -1,10 +1,9 @@
 #!/bin/bash
 
 function run {
-  if ! pgrep -x $(basename $1 | head -c 15) 1>/dev/null;
-  then
-    $@&
-  fi
+	if ! pgrep -x $(basename $1 | head -c 15) 1>/dev/null; then
+		$@ &
+	fi
 }
 
 #Set your native resolution IF it does not exist in xrandr
@@ -24,7 +23,7 @@ function run {
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 if [ $keybLayout = "be" ]; then
-  cp $HOME/.config/qtile/config-azerty.py $HOME/.config/qtile/config.py
+	cp $HOME/.config/qtile/config-azerty.py $HOME/.config/qtile/config.py
 fi
 
 #autostart ArcoLinux Welcome App
@@ -41,6 +40,8 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #start sxhkd to replace Qtile native key-bindings
 run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
 
+# run Xmodmap
+xmodmap $HOME/.Xmodmap
 
 #starting utility applications at boot time
 run variety &
