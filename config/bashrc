@@ -399,8 +399,10 @@ alias personal='cp -Rf /personal/* ~'
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 # My python projects
-# alias pp="source ~/Repos/dotfiles/scripts/py_projects.sh"
-alias py="python ~/Projects/Python/py-dotfiles/qtile/scripts/py_projects.py"
+alias pp="python ~/Repos/py-dotfiles/scripts/py_projects.py"
+
+# Neovim kickstart alias
+alias nvk='NVIM_APPNAME="nvim-kickstart" nvim'
 
 # reporting tools - install when not installed
 neofetch

@@ -62,6 +62,7 @@ def select_project_folder(project_folders):
         )
         print(f"Selected project: {selected_folder}")
         start_tmux_session(selected_folder)
+        activate_virtualenv(".venv")
 
 
 def create_new_project():
@@ -85,6 +86,9 @@ def create_new_project():
 
     # Start a tmux session for the new project
     start_tmux_session(new_project_folder)
+
+    # Activare virtual environment
+    activate_virtualenv(".venv")
 
 
 def create_virtualenv(project_folder):

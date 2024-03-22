@@ -40,6 +40,7 @@ def adding_configs():
             ("starhip/starhip.toml", "~/.config/starship.toml"),
             ("bashrc", "~/.bashrc"),
             ("qtile", "~/.config/qtile"),
+            ("nvim", "~/.config/nvim"),
         ]
         for config, destination in configs:
             source_path = os.path.abspath(f"config/{config}")
