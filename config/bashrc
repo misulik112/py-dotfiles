@@ -401,9 +401,6 @@ alias personal='cp -Rf /personal/* ~'
 # My python projects
 alias pp="python ~/Repos/py-dotfiles/scripts/py_projects.py"
 
-# Neovim kickstart alias
-alias nvk='NVIM_APPNAME="nvim-kickstart" nvim'
-
 # reporting tools - install when not installed
 neofetch
 #screenfetch
