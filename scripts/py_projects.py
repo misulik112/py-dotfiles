@@ -17,16 +17,6 @@ def list_project_folders():
         for f in os.listdir(projects_folder)
         if os.path.isdir(os.path.join(projects_folder, f))
     ]
-
-    # If no projects exist, return an empty list
-    # if not project_folders:
-    #     print("No projects found.")
-    # else:
-    #     # Print available project folders
-    #     print("Available projects:")
-    #     for i, folder in enumerate(project_folders):
-    #         print(f"{i+1}. {folder}")
-    #
     return project_folders
 
 
